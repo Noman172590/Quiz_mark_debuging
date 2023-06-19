@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question and answer</title>
+</head>
+<body style="border: 2px dashed red; padding: 14px;">
+        <section >
+                <div style="border: 2px dashed green; padding: 10px;margin: 10px;">
+                    <h1 style="text-align: center;">forEach</h1>
+                    <p style="text-align: center; margin:0px 120px;color: grey;">
+
+                        .forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined.
+                        <br><br>
+                        Example:
+                        In the example below we would use .forEach() to iterate over an array of food and log that we would want to eat each of them.
+                        <br><br>
+                        let food = ['mango','rice','pepper','pear'];
+                        food.forEach(function(foodItem){ console.log('I want to eat '+foodItem);
+                        });</p>
+                </div>    
+                <div style="border: 2px dashed red;padding: 10px;margin: 10px">
+                    <h1 style="text-align: center;">.map()</h1>
+                    <p style="text-align: center; margin:0px 120px;color: grey;">
+
+                        .map() executes the same code on every element in an array and returns a new array with the updated elements.
+                        <br><br>
+                        Example:
+                        In the example below we would use .map to iterate over the elements of the cost array and divide each element by 10, then assign our new array containing the new cost to the variable newCost.
+                        <br><br>
+                        let cost = [100,400,300,700];
+                        let newCost = cost.map(function(costItem){ return costItem / 10;
+                        });
+                        console.log(newCost)</p>
+                </div>    
+                <div style="border: 2px dashed green;padding: 10px;margin: 10px">
+                    <h1 style="text-align: center;">.filter()</h1>
+                    <p style="text-align: center; margin:0px 120px;color: grey;">
+
+                        .filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.
+                        <br><br>
+                        Example:
+                        In the example below we would use .filter to return values that are less than 200.
+                        <br><br>
+                        let cost = [100,400,50,40,700];
+                        let smallCost = cost.filter(function(costItem){ return costItem < 200
+                        });
+                        console.log(smallCost);</p>
+                </div>    
+                <div style="border: 2px dashed brown;padding: 10px;margin: 10px">
+                    <h1 style="text-align: center;">.find()</h1>
+                    <p style="text-align: center; margin:0px 120px;color: grey;">
+
+                        Function .find() is also a search function like the previous but they differ in one small detail — this function returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.
+                        <br><br>
+                        Example:
+                        Here is an example of searching by more advanced terms in an array of objects and finding an object with a property name that is equal to John Doe:
+                        <br><br>
+                        let cost = [100,400,50,40,700];
+                        let smallCost = cost.find(function(costItem){ return costItem < 200
+                        });
+                        console.log(smallCost);</p>
+                </div>    
+        </section>
+        <section style="text-align: center; margin: 0px 120px;border: 2px dashed salmon;padding: 10px; margin: 10px;">
+                    <h1>Local Storage vs Cookies: What's the Difference?</h1>
+                    <h4>Access on the Server</h4>
+                    <p>
+                        As mentioned in the previous sections, the server can access the client's cookies but not the data stored in the client's storage.
+
+                        So, in use cases where it's important for the server to have access to a set of data, you should use cookies
+                    </p>
+                    <h4>Data Size</h4>
+                    <p>
+                        There's a big difference between the size of data that cookies can hold and that of the local storage. For cookies, the maximum size is 4096 bytes, whereas for local storage it's 5MB.
+
+                        For that reason, cookies should not be used to store large pieces of data. For example, if you want to store the user's details in the browser then it's best to store them in the local storage.
+                    </p>
+                    <h4>Data Expiry </h4>
+                    <p>
+                        Cookies have an expiry date. You can set it to a very far away date, but it still expires. On the other hand, data in the local storage does not expire and will be available any time the user opens your website. The only way to clear local storage is either manually with code or if the user clears their browser storage manually.
+                    </p>
+                    <h4>Better API</h4>
+                    <p>
+                        Unless you're using a JavaScript library to facilitate this, it can be a hassle to read or write cookies using document.cookies as there is no straight way to do it.
+                    </p>
+        </section>
+
+        <section style="text-align: center; margin: 0px 120px; border: 2px dashed teal  ;">
+                        <h1>What is the Event Loop?</h1>
+                        <p>The common denominator in all environments is a built-in mechanism called the event loop, which handles the execution of multiple chunks of your program over time, each time invoking the JS Engine.
+                            This means that the JS Engine is just an on-demand execution environment for any arbitrary JS code. It’s the surrounding environment that schedules the events (the JS code executions).
+
+                            So, for example, when your JavaScript program makes an Ajax request to fetch some data from the server, you set up the “response” code in a function (the “callback”), and the JS Engine tells the hosting environment:
+                            “Hey, I’m going to suspend execution for now, but whenever you finish with that network request, and you have some data, please call this function back.”
+
+                            The browser is then set up to listen for the response from the network, and when it has something to return to you, it will schedule the callback function to be executed by inserting it into the event loop.
+                        </p>
+        </section>
+
+</body>
+</html>
